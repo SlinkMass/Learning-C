@@ -1,4 +1,5 @@
 #include <iostream> //Instructs the compiler to include the declarations of the standard stream I/O facilities as found in iostream
+#include <string> //And include declarations of strings
 
 using namespace std; //Makes names from std without std::
 
@@ -26,11 +27,13 @@ int main()   //Defines a function called main. the {} represent a grouping (The 
 //Every name and expression has a data type which defines the operations that may be performed on it and its functionality. This data type must be declared when the name is declared
 //Fundamental types include:            
 //bool - boolean, inc true and false                size: 1
-//char - character, e.g. "a" or "1"                 size: 1
+//char - character, e.g. "a" or "1"                 size: 1        Note: Chars must be declared with single quotes e.g. char letter = 'A'
 //int - integer values                              size: 4
 //double - double precision floating point number   size: 8
 //Each of these types have a fixed size memory-wise which is important to consider when porgramming at this level (size references no. of bytes)
 //To find out the size of any given dat type, the sizeof() operator can be used
+
+//Strings are also a data type but require #include <string>
 
 //All basic operations are the same in c++, bar from
 //unary plus -->  +x
@@ -42,9 +45,19 @@ void some_function()
     int i = 7;
     d = d+i;
     i=d*i;
+    //Note that:
+    i++;
+    //Can also be written as
+    ++i; 
+    //These are postfix and prefix representations respectively. Post returns the value before the change and then increments it, pre increments then returns it.
     //There is also a variety of different ways to initialise variables like
     double digit {2.3};
     //book shows some depreciated ways so idk about special variable types
     //the auto keyword can also be used, which automatically gives the variable a type
-    auto boolean = true
+    auto boolean = true;
+}
+
+void another_function(){
+    string letters = "ABCDEFG";
+    char letter = 'A';
 }
